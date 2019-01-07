@@ -66,9 +66,8 @@ public class SortingUtil {
         int i; //goes through the whole list
         int x = 0; //keeps track of the next smallest int
         int y = 0; //keeps track of where to start next
-        int temp = 0;
-        int swap = 1;
-        while (swap > 0){
+        int temp; //used to swap
+        while (y < arr.length - 1){
             for (i = y ; i < arr.length; i++){
                 if (arr[x] > arr[i]){
                     x = i;
@@ -76,7 +75,9 @@ public class SortingUtil {
             }
             temp = arr[y];
             arr[y] = arr[x];
+            arr[x] = temp;
             y++;
+            x = y;
             
         }
     }

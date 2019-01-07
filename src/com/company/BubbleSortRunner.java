@@ -26,5 +26,20 @@ public class BubbleSortRunner {
         time = System.nanoTime() - time;
 
         System.out.println("Time Taken: " + time);
+
+
+
+        //time test for selectionSort
+        time = System.nanoTime();
+
+        int[] testArr2 = {8,6,7,5,3,0,9,10,1,2,3};
+        SortingUtil.selectionSort(testArr2);
+        for (int num:testArr2)
+            System.out.print(num+" ");
+        System.out.println();
+
+        time = System.nanoTime() - time;
+        System.out.println("Time Taken: " + time);
+
     }
 }
